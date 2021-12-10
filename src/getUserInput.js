@@ -20,7 +20,7 @@ async function runQuery(type) {
       return answers
     })
     .catch(function (err) {
-      console.log(chalk.red('Error:'),err)
+      console.log(chalk.red('Error:'), err)
     })
 }
 

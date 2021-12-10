@@ -34,26 +34,21 @@ const createEmployeeCard = (employee) => {
             <div class="employee-role">${icon} ${employeeRole}</div>
         </div>
         <div class="employee-details">
-            <div class="employee-detail">ID: ${employee.getId}</div>
-            <div class="employee-detail">Email: <a href='mailto:${employee.email}'>${employee.getEmail}</a></div>
+            <div class="employee-detail">ID:${employee.getId}</div>
+            <div class="employee-detail">Email:<a href='mailto:${employee.email}'>${employee.getEmail}</a></div>
             ${lastDetailHtml}
         </div>
     </div>
 `
 }
 
-const htmls = {
-  engineer: createEmployeeCard,
-  intern: createEmployeeCard,
-  manager: createEmployeeCard,
-}
-
 const generateHTML = (data) => {
   const manager = data.manager
   const team = data.team
-  const managerCard = htmls[manager.getRole.toLowerCase()](manager)
-  const teamCards = team.map((employee)=>{
-    return htmls[employee.getRole.toLowerCase()](employee)
+  const managerCard = createEmployeeCard(manager)
+  let teamCards = []
+  team.forEach((employee)=>{
+    teamCards += createEmployeeCard(employee)
   })
 
   const htmlPage = `
