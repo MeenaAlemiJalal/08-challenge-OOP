@@ -1,8 +1,8 @@
-import Engineer from './lib/Engineer.js'
-import Manager from './lib/Manager.js'
-import Intern from './lib/Intern.js'
-import generateHTML from './src/generateHTML.js'
-import runQuery from './src/getUserInput.js'
+const Engineer = require('./lib/Engineer')
+const Manager = require('./lib/Manager')
+const Intern  = require('./lib/Intern')
+const generateHTML = require('./src/generateHTML')
+const runQuery = require('./src/getUserInput')
 
 
 const data = {

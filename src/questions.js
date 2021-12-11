@@ -1,4 +1,4 @@
-export const managerRelatedQuestions = [
+const managerRelatedQuestions = [
     {
       type: 'input',
       name: 'name',
@@ -21,7 +21,7 @@ export const managerRelatedQuestions = [
     },
   ]
   
-  export const engineerRelatedQuestions = [
+  const engineerRelatedQuestions = [
     {
       type: 'input',
       name: 'name',
@@ -44,7 +44,7 @@ export const managerRelatedQuestions = [
     },
   ]
   
-  export const internRelatedQuestions = [
+  const internRelatedQuestions = [
     {
       type: 'input',
       name: 'name',
@@ -67,7 +67,7 @@ export const managerRelatedQuestions = [
     },
   ]
   
-  export const menuRelatedOptions = [
+  const menuRelatedOptions = [
     {
       type: 'list',
       name: 'option',
@@ -78,3 +78,12 @@ export const managerRelatedQuestions = [
       },
     },
   ]
+
+  const questions = {
+    managerRelatedQuestions,
+    engineerRelatedQuestions,
+    internRelatedQuestions,
+    menuRelatedOptions
+  }
+
+  module.exports = questions

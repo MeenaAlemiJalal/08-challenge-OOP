@@ -1,17 +1,11 @@
-import inquirer from 'inquirer'
-import chalk from 'chalk'
-import {
-  managerRelatedQuestions,
-  engineerRelatedQuestions,
-  internRelatedQuestions,
-  menuRelatedOptions
-} from './questions.js'
+const inquirer = require('inquirer')
+const Questions = require('./questions')
 
 const questions = {
-  manager: managerRelatedQuestions,
-  engineer: engineerRelatedQuestions,
-  intern: internRelatedQuestions,
-  menu: menuRelatedOptions
+  manager: Questions.managerRelatedQuestions,
+  engineer: Questions.engineerRelatedQuestions,
+  intern: Questions.internRelatedQuestions,
+  menu: Questions.menuRelatedOptions
 }
 
 async function runQuery(type) {
@@ -24,4 +18,4 @@ async function runQuery(type) {
     })
 }
 
-export default runQuery
+module.exports = runQuery

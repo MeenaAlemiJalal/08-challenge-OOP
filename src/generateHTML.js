@@ -1,5 +1,4 @@
-import fs from 'fs'
-import chalk from 'chalk'
+const fs = require('fs')
 
 
 const createEmployeeCard = (employee) => {
@@ -73,11 +72,11 @@ const generateHTML = (data) => {
 
   fs.writeFile('./dist/index.html', htmlPage, (err) => {
     if(err) {
-      console.log(chalk.red('Error generating html'), err)
+      console.log('Error generating html', err)
     } else {
-      console.log(chalk.green('SUCCESS:'), `"index.html" generated inside /dist folder`)
+      console.log('SUCCESS:', `"index.html" generated inside /dist folder`)
     }
   })
 }
 
-export default generateHTML
+module.exports = generateHTML
