@@ -8,6 +8,9 @@ When decided to exit the program select the ```done``` option from the menu, thi
 ## Testing
 To run the test suites type ```npm run test``` from the root directory.
 
+## walktrough video
+
+
 ## Screeshots
 
 <img width="539" alt="cli-propmpts" src="https://user-images.githubusercontent.com/91281668/145691893-8c6da29c-2d6b-42bc-ad6a-3c1c2e419263.png">
